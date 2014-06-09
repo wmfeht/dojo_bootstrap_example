@@ -1,0 +1,82 @@
+.app {
+    margin-top: 70px;
+}
+
+.dojo-example .product-editor.edit .form-control-static {
+    display: none;
+}
+
+.dojo-example .product-editor .editor-control {
+    display: none;
+}
+
+.dojo-example .product-editor.edit .editor-control {
+    display: inline-block;
+}
+
+.product-editor {
+    padding-bottom: 0;
+    position: relative;
+}
+
+
+.product-editor .static-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.product-editor .edit-btn-group {
+    display: none;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    pointer-events: all;
+}
+
+.product-editor:hover:not(.edit) .edit-btn-group {
+    display: block;
+}
+
+.dbootstrap .app .dgrid .dgrid-row:hover, .dbootstrap .dgrid .dgrid-row:hover .dgrid-cell {
+    background: inherit !important;
+    color: inherit !important;
+    text-shadow: none !important;
+}
+
+.product-list .dgrid {
+    height: auto;
+}
+.product-list .dgrid .dgrid-scroller {
+    position: relative;
+    overflow: visible;
+}
+
+.dbootstrap .product-list .dgrid .dgrid-row-odd {
+    background: white;
+}
+
+.dbootstrap .product-list .dgrid .dgrid-row-even {
+    background: white;
+}
+
+.dbootstrap .product-list .dgrid .dgrid-cell {
+    border: none;
+}
+
+.dbootstrap .product-list .dgrid .dgrid-row {
+     border: none;
+ }
+
+.dbootstrap .product-list .dgrid {
+    border: none;
+}
+
+.product-list .static-buttons {
+    position: fixed;
+    top: 80px;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "dojo_example",
+  "version": "0.0.1",
+  "authors": [
+    "wmfeht <wmfeht@outlook.com>"
+  ],
+  "description": "Dojo live code examples",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "dojo": "~1.9.3",
+    "dijit": "~1.9.3",
+    "dojox": "~1.9.3",
+    "put-selector": "~0.3.5",
+    "dgrid": "~0.3.15",
+    "xstyle": "~0.2.1"
+  }
+}

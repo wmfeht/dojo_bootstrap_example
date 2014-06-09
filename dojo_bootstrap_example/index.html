@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dojo Example</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./css/dojo_example.css">
+</head>
+<body class="dbootstrap dojo-example">
+
+<div data-dojo-type="widgets/Navbar"></div>
+<div data-dojo-type="widgets/App"></div>
+
+<script type="application/javascript" src="./config/default.js"></script>
+<script type="application/javascript" src="./lib/dojo/dojo.js"></script>
+<script type="application/javascript">
+    require([
+        'dbootstrap',
+        'widgets/App',
+        'widgets/Navbar',
+        'dojo/parser'
+    ], function (dbootstrap, App, Navbar, parser) {
+        parser.parse();
+    });
+</script>
+</body>
+</html>

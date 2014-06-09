@@ -1,0 +1,58 @@
+<div class="panel panel-default product-editor">
+    <form class="form-horizontal panel-body">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Name:</label>
+            <div class="col-sm-10">
+                <p class="form-control-static"
+                   data-dojo-attach-point="nameNode"></p>
+                <input class="editor-control"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-attach-point="nameEditor" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Description:</label>
+            <div class="col-sm-10">
+                <p class="form-control-static"
+                   data-dojo-attach-point="descriptionNode"></p>
+                <textarea class="editor-control"
+                          data-dojo-type="dijit/form/Textarea"
+                          data-dojo-attach-point="descriptionEditor">
+                </textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Price:</label>
+            <div class="col-sm-10">
+                <p class="form-control-static"
+                   data-dojo-attach-point="priceNode"></p>
+                <input class="editor-control"
+                       data-dojo-type="dijit/form/CurrencyTextBox"
+                       data-dojo-props="currency:'USD'"
+                       data-dojo-attach-point="priceEditor" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="pull-right editor-control">
+                    <button class="btn btn-primary"
+                            data-dojo-attach-event="onClick: _onSave">Save</button>
+                    <button class="btn btn-default"
+                            data-dojo-attach-event="onClick: _onCancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="static-overlay">
+        <div class="edit-btn-group">
+            <button class="btn btn-sm btn-default"
+                    data-dojo-attach-event="onClick: _onEdit">
+                <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit
+            </button>
+            <button class="btn btn-sm btn-danger"
+                    data-dojo-attach-event="onClick: _onDelete">
+                <span class="glyphicon glyphicon-remove"></span>&nbsp;Delete
+            </button>
+        </div>
+    </div>
+</div>
