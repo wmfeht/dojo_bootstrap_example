@@ -2,6 +2,7 @@ define([
     'dojo/_base/declare',
     'dojo/_base/lang'
 ], function (declare, lang) {
+    // summary: Base class for xhr handlers
     var defaultOptions = {
         handleAs: 'json',
         timeout: 180,
