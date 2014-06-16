@@ -1,3 +1,7 @@
+/**
+ * Data model for a Product
+ * @module models/Product
+ */
 define([
     'dojo/_base/declare',
     'dojo/Deferred',
@@ -5,6 +9,9 @@ define([
     'xhr/productHandler'
 ], function (declare, Deferred, Stateful, productHandler) {
     return declare([Stateful], {
+        /**
+         * @param {Object} data
+         */
         constructor: function (data) {
             this.id = data.id;
             this.name = data.name;
@@ -17,6 +24,9 @@ define([
         description: null,
         price: null,
 
+        /**
+         * Persist data via xhr
+         */
         persist: function () {
             var self = this;
             var data = {
@@ -36,6 +46,10 @@ define([
             });
         },
 
+        /**
+         * Delete product
+         * @returns {Deferred}
+         */
         del: function () {
             var self = this;
             if (self.id > 0) {

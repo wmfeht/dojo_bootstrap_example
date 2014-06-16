@@ -1,3 +1,7 @@
+/**
+ * Widget for the 'About this application' page
+ * @module widgets/App
+ */
 define([
     'dojo/_base/declare',
     'dijit/_WidgetBase',

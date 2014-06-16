@@ -1,3 +1,7 @@
+/**
+ * Editor/display for a single Product
+ * @module widgets/product/ProductEditor
+ */
 define([
     'dojo/currency',
     'dojo/Evented',
@@ -62,6 +66,9 @@ define([
             this.pushData();
         },
 
+        /**
+         * Push data from model to UI
+         */
         pushData: function () {
             var self = this;
             self.nameEditor.set('value', self.data.name);
@@ -69,6 +76,9 @@ define([
             self.priceEditor.set('value', '$' + currency.format(self.data.price));
         },
 
+        /**
+         * Pull data from editors to model
+         */
         pullData: function () {
             var self = this;
             self.data.set('name', self.nameEditor.get('value'));
@@ -76,12 +86,22 @@ define([
             self.data.set('price', self.priceEditor.get('value'));
         },
 
+        /**
+         * Event handler for edit button click
+         * @param {Event} evt
+         * @private
+         */
         _onEdit: function (evt) {
             this.pushData();
             put(this.domNode, '.edit');
             evt.preventDefault();
         },
 
+        /**
+         * Event handler for cancel button click
+         * @param {Event} evt
+         * @private
+         */
         _onCancel: function (evt) {
             var self = this;
             put(self.domNode, '!edit');
@@ -91,6 +111,11 @@ define([
             evt.preventDefault();
         },
 
+        /**
+         * Event handler for save button click
+         * @param {Event} evt
+         * @private
+         */
         _onSave: function (evt) {
             this.pullData();
             this.data.persist();

@@ -1,3 +1,7 @@
+/**
+ * Navbar widget
+ * @module widgets/Navbar
+ */
 define([
     'dojo/router',
     'dojo/_base/declare',
@@ -18,7 +22,9 @@ define([
                 about: self.aboutLink,
                 contact: self.contactLink
             };
-            router.register('/:path', function (evt) {
+
+            // Set currently active navbar link when hash changes
+            router.register('/:path/*', function (evt) {
                 var path = evt.params.path;
                 for (var prop in self.links) {
                     if (self.links.hasOwnProperty(prop)) {

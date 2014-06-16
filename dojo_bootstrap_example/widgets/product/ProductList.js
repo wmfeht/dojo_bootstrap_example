@@ -1,3 +1,7 @@
+/**
+ * Widget displays a list of Products
+ * @module widgets/product/ProductList
+ */
 define([
     'dojo/on',
     'dojo/_base/declare',
@@ -26,7 +30,7 @@ define([
     ProductEditor,
     productHandler,
     template
-    ) {
+) {
     return declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
         templateString: template,
 
@@ -67,6 +71,11 @@ define([
             this.grid.startup();
         },
 
+        /**
+         * Event handler for new button click
+         * @param {Event} evt
+         * @private
+         */
         _onNew: function (evt) {
             var newObj = new Product({
                 id: Math.random() * -1000,

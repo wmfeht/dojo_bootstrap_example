@@ -1,3 +1,7 @@
+/**
+ * Widget with content for the 'Contact' screen
+ * @module widgets/Contact
+ */
 define([
     'dojo/_base/declare',
     'dijit/_WidgetBase',
