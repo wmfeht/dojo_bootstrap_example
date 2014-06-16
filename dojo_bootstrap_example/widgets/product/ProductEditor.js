@@ -123,6 +123,11 @@ define([
             evt.preventDefault();
         },
 
+        /**
+         * Event handler for delete button click
+         * @param {Event} evt
+         * @private
+         */
         _onDelete: function (evt) {
             var self = this;
             this.data.del().then(function () {
